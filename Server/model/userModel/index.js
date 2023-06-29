@@ -28,8 +28,14 @@ const userSchema = mongoose.Schema({
         type: String,
         default: '../public/assets/User.jpg'
     },
-    resetToken: String,
-    accessToken: String
+    resetToken: {
+        type: String,
+        trim: true
+    },
+    accessToken: {
+        type: String,
+        trim: true
+    }
 
 }, {
     timestamps: true
